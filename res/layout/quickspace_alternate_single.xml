@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:id="@+id/quickspace_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:orientation="vertical">
+
+    <com.android.launcher3.quickspace.views.DateTextView
+        android:id="@+id/clock_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_quickspace"
+        android:clickable="true"
+        android:fontFamily="google-sans"
+        android:maxLines="1"
+        android:paddingLeft="16dp"
+        android:textColor="?attr/workspaceAccentColor"
+        android:textSize="@dimen/quickspace_alternate_title_size"
+        style="@style/QuickSpaceText" />
+
+    <LinearLayout
+        android:id="@+id/weather_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_weight="0"
+        android:background="@drawable/bg_quickspace"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp">
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <com.android.launcher3.quickspace.views.DoubleShadowTextView
+            android:id="@+id/weather_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.75"
+            android:drawablePadding="6dp"
+            android:fontFamily="google-sans"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="?attr/workspaceTextColor"
+            android:textSize="@dimen/quickspace_alternate_subtitle_size"
+            app:ambientShadowBlur="3dp"
+            app:ambientShadowColor="?attr/workspaceAmbientShadowColor"
+            app:keyShadowBlur="2dp"
+            app:keyShadowColor="?attr/workspaceKeyShadowColor"
+            app:keyShadowOffsetX="0.5dp"
+            style="@style/QuickSpaceSubText" />
+    </LinearLayout>
+</LinearLayout>
+
